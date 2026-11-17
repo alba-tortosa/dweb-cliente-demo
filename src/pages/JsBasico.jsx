@@ -5,7 +5,6 @@ export default function JsBasico() {
   return (
     <>
       <h1>JS Básico</h1>
-      <p className="introduccion">Paso 2 · Funciones Javascript.</p>
       <p>Explora los ejemplos y completa los TODO de <code>src/utils/ejercicios.js</code>. Guarda y vuelve a pulsar «Probar mi función».</p>
       <section aria-labelledby="ejemplos-js">
         <h2 id="ejemplos-js">1. Ejemplos resueltos</h2>
@@ -361,6 +360,60 @@ export default function JsBasico() {
             <div className="resultado-js" aria-live="polite">
               <strong>Resultado: </strong>
               <output id="resultado-solapan">Cambia los datos y pulsa el botón.</output>
+            </div>
+          </article>
+          <article className="tarjeta-js">
+            <p className="tipo-tarjeta">Ejercicio 15</p>
+            <h3>Crear el cartel de artistas</h3>
+            <code>crearCartel(artistas)</code>
+            <p>Une los nombres con el separador « · » (con un espacio a cada lado). Con Luna;Bruma;Norte devuelve «Luna · Bruma · Norte». Una lista vacía devuelve el texto vacío.</p>
+            <p><strong>Pista:</strong> Pasa el separador a <code>join</code>.</p>
+            <div className="controles-js">
+              <label>artistas (valores separados por ;)
+                <input id="crearCartel-artistas" type="text" defaultValue="Luna;Bruma;Norte" />
+              </label>
+              <button type="button" onClick={interacciones.probarcrearCartel}>Probar mi función</button>
+            </div>
+            <div className="resultado-js" aria-live="polite">
+              <strong>Resultado: </strong>
+              <output id="resultado-crearCartel">Cambia los datos y pulsa el botón.</output>
+            </div>
+          </article>
+          <article className="tarjeta-js">
+            <p className="tipo-tarjeta">Ejercicio 16</p>
+            <h3>Buscar entradas dentro del presupuesto</h3>
+            <code>hayEntradasEnPresupuesto(precios, maximo)</code>
+            <p>Devuelve true si algún precio es menor o igual al máximo. Con 18;25;12 y un máximo de 12 devuelve true. Con un máximo de 10 o con una lista vacía devuelve false. Usa precios y máximos no negativos.</p>
+            <p><strong>Pista:</strong> Usa <code>some</code> con una función con nombre. Convierte cada precio y el máximo con <code>Number</code>.</p>
+            <div className="controles-js">
+              <label>precios (valores separados por ;)
+                <input id="hayEntradasEnPresupuesto-precios" type="text" defaultValue="18;25;12" />
+              </label>
+              <label>máximo
+                <input id="hayEntradasEnPresupuesto-maximo" type="number" defaultValue={12} min="0" step="any" />
+              </label>
+              <button type="button" onClick={interacciones.probarhayEntradasEnPresupuesto}>Probar mi función</button>
+            </div>
+            <div className="resultado-js" aria-live="polite">
+              <strong>Resultado: </strong>
+              <output id="resultado-hayEntradasEnPresupuesto">Cambia los datos y pulsa el botón.</output>
+            </div>
+          </article>
+          <article className="tarjeta-js">
+            <p className="tipo-tarjeta">Ejercicio 17</p>
+            <h3>Ordenar precios de menor a mayor</h3>
+            <code>ordenarPrecios(precios)</code>
+            <p>Devuelve un array nuevo de números ordenados de menor a mayor y conserva la lista original. Con 20;5;100;12 devuelve [5, 12, 20, 100]. Una lista vacía devuelve []. Usa precios no negativos.</p>
+            <p><strong>Pista:</strong> Crea un array de números con <code>map</code> y <code>Number</code>. Aplica <code>sort</code> a ese array con una función con nombre que devuelva la diferencia entre los dos números.</p>
+            <div className="controles-js">
+              <label>precios (valores separados por ;)
+                <input id="ordenarPrecios-precios" type="text" defaultValue="20;5;100;12" />
+              </label>
+              <button type="button" onClick={interacciones.probarordenarPrecios}>Probar mi función</button>
+            </div>
+            <div className="resultado-js" aria-live="polite">
+              <strong>Resultado: </strong>
+              <output id="resultado-ordenarPrecios">Cambia los datos y pulsa el botón.</output>
             </div>
           </article>
         </div>

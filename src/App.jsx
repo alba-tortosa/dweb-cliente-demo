@@ -1,5 +1,6 @@
 import Inicio from './pages/Inicio.jsx';
 import JsBasico from './pages/JsBasico.jsx';
+import Eventos from './pages/Eventos.jsx';
 
 // Un componente es una función que devuelve una descripción de la interfaz.
 // Su nombre empieza por mayúscula para que React lo reconozca como componente.
@@ -19,6 +20,9 @@ function App() {
       break;
     case '/js-basico':
       pagina = <JsBasico />;
+      break;
+    case '/eventos':
+      pagina = <Eventos />;
       break;
     default:
       // Si la ruta no está definida, mostramos Inicio y destacamos su enlace.
@@ -40,6 +44,7 @@ function App() {
               Las llaves admiten expresiones, pero no sentencias como if o for. */}
           <a href="/" className={ruta === '/' ? 'activo' : ''}>Inicio</a>
           <a href="/js-basico" className={ruta === '/js-basico' ? 'activo' : ''}>JS Básico</a>
+          <a href="/eventos" className={ruta === '/eventos' ? 'activo' : ''}>Eventos</a>
         </nav>
       </header>
 

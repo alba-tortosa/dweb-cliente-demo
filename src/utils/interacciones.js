@@ -165,3 +165,34 @@ export function probarsolapan() {
   let resultado = ejercicios.solapan(inicioA, finA, inicioB, finB);
   document.getElementById('resultado-solapan').textContent = String(resultado);
 }
+
+export function probarcrearCartel() {
+  let textoArtistas = document.getElementById('crearCartel-artistas').value;
+  let artistas = [];
+  if (textoArtistas.trim() !== '') {
+    artistas = textoArtistas.split(';');
+  }
+  let resultado = ejercicios.crearCartel(artistas);
+  document.getElementById('resultado-crearCartel').textContent = JSON.stringify(resultado) ?? 'Ejercicio pendiente.';
+}
+
+export function probarhayEntradasEnPresupuesto() {
+  let textoPrecios = document.getElementById('hayEntradasEnPresupuesto-precios').value;
+  let precios = [];
+  if (textoPrecios.trim() !== '') {
+    precios = textoPrecios.split(';');
+  }
+  let maximo = document.getElementById('hayEntradasEnPresupuesto-maximo').value;
+  let resultado = ejercicios.hayEntradasEnPresupuesto(precios, maximo);
+  document.getElementById('resultado-hayEntradasEnPresupuesto').textContent = JSON.stringify(resultado) ?? 'Ejercicio pendiente.';
+}
+
+export function probarordenarPrecios() {
+  let textoPrecios = document.getElementById('ordenarPrecios-precios').value;
+  let precios = [];
+  if (textoPrecios.trim() !== '') {
+    precios = textoPrecios.split(';');
+  }
+  let resultado = ejercicios.ordenarPrecios(precios);
+  document.getElementById('resultado-ordenarPrecios').textContent = JSON.stringify(resultado) ?? 'Ejercicio pendiente.';
+}

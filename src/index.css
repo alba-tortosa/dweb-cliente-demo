@@ -112,6 +112,9 @@ footer p { margin: 0; }
 }
 .tarjeta-js button { background: #215b45; color: #fff; cursor: pointer; }
 .tarjeta-js button:hover { background: #183f31; }
+.tarjeta-js .opciones-eventos { border: 1px solid #82958a; border-radius: 6px; }
+.tarjeta-js .opciones-eventos label { display: flex; align-items: center; gap: 10px; }
+.tarjeta-js input[type="checkbox"] { width: auto; }
 .tarjeta-js :is(input, select, button, summary):focus-visible, .datos-js summary:focus-visible {
   outline: 3px solid #287154; outline-offset: 3px;
 }
@@ -125,7 +128,7 @@ summary { cursor: pointer; }
 .datos-js { padding: 16px; border: 1px solid #b5c2b4; border-radius: 8px; }
 
 
-@media (max-width: 540px) {
+@media (max-width: 680px) {
   :root { --altura-cabecera: 132px; }
   .barra-festival { flex-wrap: wrap; gap: 8px 12px; }
   .barra-festival nav { width: 100%; margin-left: 0; }

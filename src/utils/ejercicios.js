@@ -122,7 +122,7 @@ export function generosUnicos(generos) {
 // 11. Buscar artistas.
 // Devuelve un array nuevo de nombres que contienen la consulta, ignorando mayúsculas y espacios exteriores de esta. Conserva los nombres originales. Una consulta vacía devuelve todos; 'zzz' devuelve [].
 export function buscarArtistas(artistas, texto) {
-  // TODO: Usa filter con una función con nombre, toLowerCase e includes. No uses flechas.
+  // TODO: Usa filter con una función con nombre, toLowerCase e includes.
   return undefined;
 }
 
@@ -144,5 +144,26 @@ export function calcularCompra(precios, cantidades) {
 // Recibe dos intervalos en minutos enteros, entre 0 y 1440 y con inicio menor que fin. Casos: 600–660 y 630–690 → true; 600–660 y 660–720 → false; intervalos separados → false. Si algún intervalo no es válido devuelve 'Horario no válido'.
 export function solapan(inicioA, finA, inicioB, finB) {
   // TODO: Convierte los cuatro parámetros con Number. Valida y comprueba si cada inicio es anterior al fin del otro intervalo.
+  return undefined;
+}
+
+// 15. Crear el cartel de artistas.
+// ['Luna', 'Bruma', 'Norte'] → 'Luna · Bruma · Norte'; [] → ''.
+export function crearCartel(artistas) {
+  // TODO: usa join con el separador ' · '.
+  return undefined;
+}
+
+// 16. Buscar entradas dentro del presupuesto.
+// Con ['18', '25', '12'] y '12' devuelve true. Con '10' o con [] devuelve false.
+export function hayEntradasEnPresupuesto(precios, maximo) {
+  // TODO: usa some con una función con nombre. Convierte los textos con Number.
+  return undefined;
+}
+
+// 17. Ordenar precios de menor a mayor.
+// ['20', '5', '100', '12'] → [5, 12, 20, 100]; [] → []. Conserva el array original.
+export function ordenarPrecios(precios) {
+  // TODO: convierte los precios en un array nuevo y usa sort con un comparador numérico.
   return undefined;
 }
