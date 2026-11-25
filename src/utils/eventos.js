@@ -36,7 +36,8 @@ export function calcularCompra(evento) {
   let cantidad = Number(cantidadTexto);
   let salida = document.getElementById('eventos-compra');
   if (precioTexto.trim() === '' || cantidadTexto.trim() === '' ||
-      precio < 0 || !Number.isInteger(cantidad) || cantidad < 1) {
+      !Number.isFinite(precio) || precio < 0 ||
+      !Number.isInteger(cantidad) || cantidad < 1) {
     salida.textContent = 'Introduce un precio no negativo y una cantidad entera mayor que 0.';
     return;
   }
