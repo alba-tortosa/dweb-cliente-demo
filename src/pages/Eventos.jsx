@@ -58,7 +58,6 @@ export default function Eventos() {
             <h3>Alternar conciertos cancelados</h3>
             <p>Muestra u oculta el listado ficticio y cambia el texto del botón. Pista: invierte la propiedad <code>hidden</code>.</p>
             <div className="controles-js"><button type="button" onClick={eventos.alternarCancelados}>Mostrar cancelados</button></div>
-            {/* React no controla estos cambios: el ejercicio modifica hidden. */}
             <ul id="eventos-cancelados" hidden>
               <li>Bruma Solar · cancelado</li><li>Voltaje Azul · cancelado</li>
             </ul>
